@@ -1,4 +1,4 @@
-﻿﻿﻿int GetCheckedNumber (string info, string allowedCharacters)
+﻿﻿﻿double GetCheckedNumber (string info, string allowedCharacters)
 {
     Console.WriteLine (info);
     string? numberToBeChecked = Console.ReadLine();
@@ -8,7 +8,7 @@
         Console.WriteLine (info);
         numberToBeChecked = Console.ReadLine ();
     }
-    int numberOk = Convert.ToInt32(numberToBeChecked);
+    double numberOk = Convert.ToDouble(numberToBeChecked);
     return numberOk;
 }
 
@@ -118,3 +118,12 @@ while (true);
 Console.WriteLine ("Следующие числа введены: " + digits + "\nКоличество чисел больше нуля: " + positiveCounter);
 //_____________________________________________
 //Task2________________________________________
+double b1 = GetCheckedNumber ("Введите число b1", "1234567890-,");
+double k1 = GetCheckedNumber ("Введите число k1", "1234567890-,");
+double b2 = GetCheckedNumber ("Введите число b2", "1234567890-,");
+double k2 = GetCheckedNumber ("Введите число k2", "1234567890-,");
+double x = (b1 - b2) / (k2 - k1);
+double y = (k1 * x + b1);
+x = Math.Round(x, 1, MidpointRounding.ToZero);
+y = Math.Round(y, 1, MidpointRounding.ToZero);
+Console.WriteLine ($"X: {x}; Y: {y}.");
