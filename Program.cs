@@ -44,30 +44,6 @@ bool isThereText (string typedNumber, string okChars)
         return true;
     }
 }
-
-void ShowArray (int [] arr)
-{
-    Console.Write("Наш массив: [");
-    if (arr.Length == 0)
-    {
-        Console.WriteLine ("Пустой массив, сэр]");
-    }
-    else
-    {
-        for (int w = 0; w < arr.Length; w++)
-        {
-            if (w != arr.Length - 1)
-            {
-                Console.Write(arr [w] + ", ");
-            }
-            else
-            {
-                Console.Write(arr [w] + "]");
-            }
-        }
-    }
-    Console.WriteLine();
-}
 //Task1_____________________________
 
 string? digits = string.Empty;
